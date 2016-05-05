@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("php_keeper", "for php_keeper support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("php_keeper", "enable php_keeper support", "no");
+
+if (PHP_PHP_KEEPER != "no") {
+	EXTENSION("php_keeper", "php_keeper.c");
+}
+

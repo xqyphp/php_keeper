@@ -1,0 +1,787 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ret",
+				"return"
+			],
+			[
+				"mod",
+				"module"
+			],
+			[
+				"k",
+				"keeper_modules"
+			],
+			[
+				"modul",
+				"modules"
+			],
+			[
+				"mo",
+				"modules"
+			],
+			[
+				"mou",
+				"module"
+			],
+			[
+				"m",
+				"modules"
+			],
+			[
+				"i",
+				"item"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"a",
+				"alert"
+			],
+			[
+				"re",
+				"reuslt"
+			],
+			[
+				"index",
+				"index1"
+			],
+			[
+				"in",
+				"index1"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"li",
+				"literalMode"
+			],
+			[
+				"Te",
+				"textNode"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"p",
+				"prototype"
+			],
+			[
+				"op",
+				"opt_for"
+			],
+			[
+				"src",
+				"src_jdom"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"my",
+				"my_val"
+			],
+			[
+				"he",
+				"header	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "keeper_engine.c",
+			"settings":
+			{
+				"buffer_size": 1334,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "keeper_module.h",
+			"settings":
+			{
+				"buffer_size": 900,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "keeper_defs.h",
+			"settings":
+			{
+				"buffer_size": 62,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/likai/Documents/php/php-5.6.20/Zend/zend_llist.c",
+			"settings":
+			{
+				"buffer_size": 6931,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/likai/Documents/php/php-5.6.20/Zend/zend_llist.h",
+			"settings":
+			{
+				"buffer_size": 3977,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/likai/Documents/php/php-5.6.20/main/main.c",
+			"settings":
+			{
+				"buffer_size": 81394,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/likai/Documents/php/php-5.6.20/main/SAPI.c",
+			"settings":
+			{
+				"buffer_size": 31050,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "keeper_moudle.c",
+			"settings":
+			{
+				"buffer_size": 2017,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "keeper_sapi.c",
+			"settings":
+			{
+				"buffer_size": 133,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#ifndef keeper_sapi_h\n#define keeper_sapi_h\n\n#include \"keeper_setting.h\"\n\nstruct keeper_sapi\n{\n	int (*register_handlers)();\n	int (*register_overrides)();\n	struct keeper_setting* load_setting();\n	int reload_setting();\n};\n\nstruct keeper_sapi* get_keeper_sapi();\n\n#endif",
+			"file": "keeper_sapi.h",
+			"file_size": 228,
+			"file_write_time": 1462198355000000,
+			"settings":
+			{
+				"buffer_size": 267,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "keeper_engine.h",
+			"settings":
+			{
+				"buffer_size": 685,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "keeper_rec.h",
+			"settings":
+			{
+				"buffer_size": 612,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "#include \"keeper_rec.h\"\n\n/*\n	const char* (*get_request_line)();\n	const char* (*get_method)();\n	const char* (*get_header)(const char* name);\n	const char* (*get_params)(const char* name);\n	const char* (*get_cookie)(const char* name);\n	const char* (*get_call_nname)();\n	const char* (*get_call_fname)();\n	int         (*get_params_count)();\n	zval        (*get_param)(int index);\n*/\n\nstatic const char* get_request_line()\n{\n	PG\n}\n\nstruct keeper_rec g_keeper_rec;\n\nstruct keeper_rec* get_keeper_rec()\n{\n	return &g_keeper_rec;\n}\n\nint keeper_rec_init(struct keeper_rec* rec)\n{\n\n}\n\nint keeper_rec_destroy(struct keeper_rec* rec)\n{\n\n}\n\n\nint keeper_rec_oncall(struct keeper_rec* rec)\n{\n\n}",
+			"file": "keeper_rec.c",
+			"file_size": 278,
+			"file_write_time": 1462278879000000,
+			"settings":
+			{
+				"buffer_size": 676,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/likai/Documents/php/php-5.6.20/main/php_globals.h",
+			"settings":
+			{
+				"buffer_size": 4174,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/likai/Documents/php/php-5.6.20/main/SAPI.h",
+			"settings":
+			{
+				"buffer_size": 10129,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/likai/Documents/php/php-5.6.20/Zend/zend_llist.h",
+		"/Users/likai/Documents/php/php-5.6.20/ext/php_keeper/keeper_engine.h",
+		"/Users/likai/Documents/php/php-5.6.20/Zend/zend_llist.c",
+		"/Users/likai/Documents/php/php-5.6.20/Zend/zend_alloc.h",
+		"/Users/likai/Documents/php/php-5.6.20/Zend/zend_stack.c",
+		"/Users/likai/Documents/php/php-5.6.20/sapi/cli/php_http_parser.c",
+		"/Users/likai/Documents/php/php-5.6.20/ext/php_keeper/keeper_rec.h",
+		"/Users/likai/Documents/php/php-5.6.20/ext/php_keeper/keeper_rec.c",
+		"/Users/likai/Documents/php/php-5.6.20/ext/php_keeper/keeper_sapi.h",
+		"/Users/likai/Documents/php/php-5.6.20/Zend/zend_API.c",
+		"/Users/likai/Documents/php/php-5.6.20/ext/php_keeper/php_keeper.c",
+		"/Users/likai/Documents/php/php-5.6.20/ext/php_keeper/keeper_moude.c",
+		"/Users/likai/Documents/php/php-5.6.20/ext/php_keeper/keeper_setting.c",
+		"/Users/likai/Documents/php/php-5.6.20/ext/php_keeper/keeper_sapi.c",
+		"/Users/likai/Documents/php/php-5.6.20/win32/sendmail.h",
+		"/Users/likai/Documents/php/php-5.6.20/ext/php_keeper/keeper_engine",
+		"/Users/likai/Documents/php/php-5.6.20/ext/php_keeper/keeper_setting.h",
+		"/Users/likai/Documents/php/php-5.6.20/ext/php_keeper/keeper_engine.c",
+		"/Users/likai/Documents/php/php-5.6.20/ext/security/security_engine.c",
+		"/Users/likai/Documents/php/php-5.6.20/ext/php_keeper/keeper_module.h",
+		"/main.c",
+		"/Users/likai/Documents/work_space/c_security/main.c",
+		"/Users/likai/Documents/work_space/c_security/security.sublime-workspace",
+		"/Users/likai/Downloads/jquery-2/jquery-2.1.1.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/likai/Documents/php/php-5.6.20",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"SG",
+			"persistent",
+			"/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n\npersistent\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n\nzend_llist_init",
+			"/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n\nzend_llist_init\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n\nzend_llist_init",
+			"/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n/Users/likai/Documents/php/php-5.6.20\n\nzend_llist_init",
+			"TOK_INT",
+			"T",
+			");\n",
+			";\n",
+			"alert"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "keeper_engine.c",
+					"settings":
+					{
+						"buffer_size": 1334,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								993,
+								1010
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 336.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "keeper_module.h",
+					"settings":
+					{
+						"buffer_size": 900,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								355,
+								310
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "keeper_defs.h",
+					"settings":
+					{
+						"buffer_size": 62,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5,
+								15
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/likai/Documents/php/php-5.6.20/Zend/zend_llist.c",
+					"settings":
+					{
+						"buffer_size": 6931,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5255,
+								5255
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3200.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/likai/Documents/php/php-5.6.20/Zend/zend_llist.h",
+					"settings":
+					{
+						"buffer_size": 3977,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2258,
+								2258
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 2.0,
+						"translation.y": 551.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/likai/Documents/php/php-5.6.20/main/main.c",
+					"settings":
+					{
+						"buffer_size": 81394,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								61708,
+								61708
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1858.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/likai/Documents/php/php-5.6.20/main/SAPI.c",
+					"settings":
+					{
+						"buffer_size": 31050,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12271,
+								12258
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 9.0,
+						"translation.y": 9821.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "keeper_moudle.c",
+					"settings":
+					{
+						"buffer_size": 2017,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								168,
+								168
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "keeper_sapi.c",
+					"settings":
+					{
+						"buffer_size": 133,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								88,
+								103
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "keeper_sapi.h",
+					"settings":
+					{
+						"buffer_size": 267,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								220,
+								220
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "keeper_engine.h",
+					"settings":
+					{
+						"buffer_size": 685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								321,
+								279
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "keeper_rec.h",
+					"settings":
+					{
+						"buffer_size": 612,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								422,
+								77
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "keeper_rec.c",
+					"settings":
+					{
+						"buffer_size": 676,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								420,
+								420
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "/Users/likai/Documents/php/php-5.6.20/main/php_globals.h",
+					"settings":
+					{
+						"buffer_size": 4174,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3030,
+								3042
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1558.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "/Users/likai/Documents/php/php-5.6.20/main/SAPI.h",
+					"settings":
+					{
+						"buffer_size": 10129,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4073,
+								4073
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2534.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 118.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 321.0,
+	"status_bar_visible": true
+}
