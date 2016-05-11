@@ -3,6 +3,12 @@
 
 #include "keeper_header.h"
 
+struct keeper_rec_globals
+{
+	/* data */
+	int type;
+};
+
 struct keeper_rec
 {
 	const char* (*get_request_line)();
@@ -10,10 +16,10 @@ struct keeper_rec
 	const char* (*get_header)(const char* name);
 	const char* (*get_params)(const char* name);
 	const char* (*get_cookie)(const char* name);
-	const char* (*get_call_nname)();
+	const char* (*get_call_cname)();
 	const char* (*get_call_fname)();
-	int         (*get_params_count)();
-	zval        (*get_param)(int index);
+	int         (*get_fargs_count)();
+	zval        (*get_farg)(int index);
 };
 
 struct keeper_rec *get_keeper_rec();

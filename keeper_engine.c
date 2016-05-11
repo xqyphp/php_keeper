@@ -1,11 +1,3 @@
-#ifdef HAVE_CONFIG_H
-#include "config.h"
-#endif
-
-#include "php.h"
-#include "php_ini.h"
-#include "ext/standard/info.h"
-
 #include "keeper_engine.h"
 #include "keeper_rec.h"
 
@@ -18,14 +10,20 @@ struct keeper_engine* get_keeper_engine()
 
 int keeper_engine_startup()
 {
-	g_keeper_engine.papi = get_keeper_sapi();
-	g_keeper_engine.setting = g_keeper_engine.papi->load_setting();
+	struct keeper_sapi* sapi = get_keeper_sapi();
+	sapi->register_handlers();
+	sapi->register_overrides();
+	g_keeper_engine.papi = sapi;
+	g_keeper_engine.setting = sapi->load_setting();
 	g_keeper_engine.modules = get_keeper_modules();
 	keeper_modules_init(g_keeper_engine.modules);
 	return SUCCESS;
 }
 int keeper_engine_shutdown()
 {
+	struct keeper_sapi* sapi = get_keeper_sapi();
+	sapi->unregister_handlers();
+	sapi->unregister_overrides();
 	return keeper_modules_destroy(g_keeper_engine.modules);
 }
 

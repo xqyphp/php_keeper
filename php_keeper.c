@@ -28,8 +28,9 @@
 #include "php_php_keeper.h"
 #include "keeper_engine.h"
 /* If you declare any globals in php_php_keeper.h uncomment this:
-ZEND_DECLARE_MODULE_GLOBALS(php_keeper)
 */
+ZEND_DECLARE_MODULE_GLOBALS(php_keeper)
+
 
 /* True global resources - no need for thread safety here */
 static int le_php_keeper;

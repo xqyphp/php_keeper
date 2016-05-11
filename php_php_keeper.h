@@ -21,6 +21,8 @@
 #ifndef PHP_PHP_KEEPER_H
 #define PHP_PHP_KEEPER_H
 
+#include "keeper_rec.h"
+
 extern zend_module_entry php_keeper_module_entry;
 #define phpext_php_keeper_ptr &php_keeper_module_entry
 
@@ -34,6 +36,7 @@ extern zend_module_entry php_keeper_module_entry;
 #	define PHP_PHP_KEEPER_API
 #endif
 
+
 #ifdef ZTS
 #include "TSRM.h"
 #endif
@@ -41,12 +44,13 @@ extern zend_module_entry php_keeper_module_entry;
 /* 
   	Declare any global variables you may need between the BEGIN
 	and END macros here:     
-
+*/
 ZEND_BEGIN_MODULE_GLOBALS(php_keeper)
 	long  global_value;
 	char *global_string;
+  struct keeper_rec_globals rec_data;
 ZEND_END_MODULE_GLOBALS(php_keeper)
-*/
+
 
 /* In every utility function you add that needs to use variables 
    in php_php_keeper_globals, call TSRMLS_FETCH(); after declaring other 

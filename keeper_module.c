@@ -12,6 +12,7 @@ struct keeper_modules* get_keeper_modules()
 	switch(ret_val){\
 			case pr_pass:\
 			case pr_next:\
+			case pr_none:\
 				continue;\
 			case pr_return:\
 				return -1;\

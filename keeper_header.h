@@ -12,4 +12,6 @@
 
 #include "keeper_defs.h"
 
+ZEND_EXTERN_MODULE_GLOBALS(php_keeper)
+
 #endif

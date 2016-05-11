@@ -9,6 +9,7 @@ struct keeper_module
 	int (*on_enter)(void* data);
 	int (*on_call)(void* data);
 	int (*on_leave)(void* data);
+	void *user_data;
 };
 
 struct keeper_modules
@@ -28,4 +29,5 @@ int keeper_modules_onleave(struct keeper_modules* modules,struct keeper_rec* rec
 
 int keeper_modules_add(struct keeper_modules* modules,struct keeper_module* module);
 int keeper_modules_del(struct keeper_modules* modules,struct keeper_module* module);
+
 #endif
