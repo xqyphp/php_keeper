@@ -1,7 +1,7 @@
-#ifndef keeper_rec
-#define keeper_rec
+#ifndef keeper_rec_h
+#define keeper_rec_h
 
-#include "php.h"
+#include "keeper_header.h"
 
 struct keeper_rec
 {
@@ -16,10 +16,10 @@ struct keeper_rec
 	zval        (*get_param)(int index);
 };
 
-struct keeper_rec* get_keeper_rec();
+struct keeper_rec *get_keeper_rec();
 
-int keeper_rec_init(struct keeper_rec* rec);
-int keeper_rec_destroy(struct keeper_rec* rec);
-int keeper_rec_oncall(struct keeper_rec* rec);
+int keeper_rec_init();
+int keeper_rec_destroy();
+int keeper_rec_oncall();
 
 #endif

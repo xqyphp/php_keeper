@@ -26,7 +26,7 @@
 #include "php_ini.h"
 #include "ext/standard/info.h"
 #include "php_php_keeper.h"
-
+#include "keeper_engine.h"
 /* If you declare any globals in php_php_keeper.h uncomment this:
 ZEND_DECLARE_MODULE_GLOBALS(php_keeper)
 */
@@ -90,6 +90,7 @@ PHP_MINIT_FUNCTION(php_keeper)
 	/* If you have INI entries, uncomment these lines 
 	REGISTER_INI_ENTRIES();
 	*/
+	keeper_engine_startup();
 	return SUCCESS;
 }
 /* }}} */
@@ -101,6 +102,7 @@ PHP_MSHUTDOWN_FUNCTION(php_keeper)
 	/* uncomment this line if you have INI entries
 	UNREGISTER_INI_ENTRIES();
 	*/
+	keeper_engine_shutdown();
 	return SUCCESS;
 }
 /* }}} */
@@ -110,6 +112,7 @@ PHP_MSHUTDOWN_FUNCTION(php_keeper)
  */
 PHP_RINIT_FUNCTION(php_keeper)
 {
+	keeper_engine_request_connect();
 	return SUCCESS;
 }
 /* }}} */
@@ -119,6 +122,7 @@ PHP_RINIT_FUNCTION(php_keeper)
  */
 PHP_RSHUTDOWN_FUNCTION(php_keeper)
 {
+	keeper_engine_request_disconnect();
 	return SUCCESS;
 }
 /* }}} */

@@ -13,9 +13,9 @@ dnl [  --with-php_keeper             Include php_keeper support])
 
 dnl Otherwise use enable:
 
-dnl PHP_ARG_ENABLE(php_keeper, whether to enable php_keeper support,
-dnl Make sure that the comment is aligned:
-dnl [  --enable-php_keeper           Enable php_keeper support])
+PHP_ARG_ENABLE(php_keeper, whether to enable php_keeper support,
+Make sure that the comment is aligned:
+[  --enable-php_keeper           Enable php_keeper support])
 
 if test "$PHP_PHP_KEEPER" != "no"; then
   dnl Write more examples of tests here...
@@ -59,5 +59,5 @@ if test "$PHP_PHP_KEEPER" != "no"; then
   dnl
   dnl PHP_SUBST(PHP_KEEPER_SHARED_LIBADD)
 
-  PHP_NEW_EXTENSION(php_keeper, php_keeper.c, $ext_shared)
+  PHP_NEW_EXTENSION(php_keeper, php_keeper.c keeper_engine.c keeper_module.c keeper_rec.c keeper_sapi.c keeper_setting.c, $ext_shared)
 fi
