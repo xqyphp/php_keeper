@@ -3,12 +3,23 @@
 #include "keeper_header.h"
 #include "keeper_rec.h"
 
+#define CHECK_MASK_ENTER 1
+#define CHECK_MASK_CALL  1 << 1
+#define CHECK_MASK_LEAVE 1 << 2
+
+struct keeper_filter_op
+{
+	/* data */
+	int type;
+	int (*filter_op)();
+};
 
 struct keeper_module
 {
 	int (*on_enter)(void* data);
 	int (*on_call)(void* data);
 	int (*on_leave)(void* data);
+	unsigned int check_mask;
 	void *user_data;
 };
 
