@@ -1,4 +1,7 @@
 #include "keeper_sapi.h"
+#include "keeper_header.h"
+
+ZEND_EXTERN_MODULE_GLOBALS(php_keeper)
 
 static int my_register_handlers()
 {

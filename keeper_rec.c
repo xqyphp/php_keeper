@@ -2,6 +2,7 @@
 #include "keeper_rec.h"
 #include "php_php_keeper.h"
 
+ZEND_EXTERN_MODULE_GLOBALS(php_keeper)
 
 struct keeper_rec_globals *get_keeper_rec_globals();
 
@@ -101,25 +102,25 @@ static const char* php_get_request_cookie(const char* name)
 
 static const char* php_get_class_name()
 {
-	keeper_rec_globals rg = *get_keeper_rec_globals();
+	struct keeper_rec_globals* rg = get_keeper_rec_globals();
 	return rg->rg_cls;
 }
 
 static const char* php_get_function_name()
 {
-	keeper_rec_globals rg = *get_keeper_rec_globals();
+	struct keeper_rec_globals* rg = get_keeper_rec_globals();
 	return rg->rg_func;
 }
 
-static const char* php_get_farg()
+static int php_get_fargc()
 {
-	keeper_rec_globals rg = *get_keeper_rec_globals();
+	struct keeper_rec_globals* rg = get_keeper_rec_globals();
 	return rg->rg_argc;
 }
 
-static zval* php_get_function_arg(int index)
+static zval* php_get_farg(int index)
 {
-	keeper_rec_globals rg = *get_keeper_rec_globals();
+	struct keeper_rec_globals* rg = get_keeper_rec_globals();
 	if(index < 0 || index >= rg->rg_argc){
 		return NULL;
 	}
@@ -137,9 +138,9 @@ static struct keeper_rec g_keeper_rec={
 	php_get_request_cookie,
 	php_get_class_name,
 	php_get_function_name,
-	php_get_fargs_count,
+	php_get_fargc,
 	php_get_farg
-}
+};
 
 struct keeper_rec* get_keeper_rec()
 {

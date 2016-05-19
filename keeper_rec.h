@@ -25,7 +25,7 @@ struct keeper_rec
 	const char* (*get_request_cookie)(const char* name);
 	const char* (*get_class_name)();
 	const char* (*get_function_name)();
-	int         (*get_fargs_count)();
+	int         (*get_fargc)();
 	zval*       (*get_farg)(int index);
 };
 
