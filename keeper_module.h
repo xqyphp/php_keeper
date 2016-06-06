@@ -1,18 +1,12 @@
 #ifndef keeper_module_h
 #define keeper_module_h
+
 #include "keeper_header.h"
 #include "keeper_rec.h"
 
 #define CHECK_MASK_ENTER 1
 #define CHECK_MASK_CALL  1 << 1
 #define CHECK_MASK_LEAVE 1 << 2
-
-struct keeper_filter_op
-{
-	/* data */
-	int type;
-	int (*filter_op)();
-};
 
 struct keeper_module
 {
